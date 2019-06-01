@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+      {% load static %}
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static "vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet">
+    <link href="{%  static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/landing-page.min.css' %}" rel="stylesheet">
+
+    <!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" />
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css'%}" />
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Start Bootstrap</a>
+        <a class="navbar-expand" href="/quoteCalculator/">GET A QUOTE</a>
+        <a class="navbar-expand" href="">BOOK NOW</a>
+        <a class="navbar-expand" href="#">ABOUT US</a>
+      </div>
+    </nav>
+
+<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-md-push-5">
+						<div class="booking-cta">
+							<h1>Make your reservation</h1>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facere, soluta magnam consectetur molestias itaque
+								ad sint fugit architecto incidunt iste culpa perspiciatis possimus voluptates aliquid consequuntur cumque quasi.
+								Perspiciatis.
+							</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-7">
+						<div class="booking-form">
+							<form action="/jobRequest/" method="post" id="bookingForm">
+                                {% csrf_token %}
+								<div class="form-group">
+									<span class="form-label">Your Email</span>
+									{{ form.email }}
+								</div>
+                                <div class="form-group">
+									<span class="form-label">Your Address</span>
+									{{ form.address }}
+								</div>
+
+                                    <div class="form-group">
+                                        <span class="form-label">Booking Date</span>
+                                        {{ form.date }}
+                                    </div>
+
+                                <div class="form-group">
+                                    <span class="form-label">Service</span>
+                                    {{ form.service }}
+                                    <span class="select-arrow"></span>
+                                </div>
+
+
+								<div class="form-btn">
+									<button class="submit-btn">Book Now</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

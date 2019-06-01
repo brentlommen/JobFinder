@@ -1,0 +1,48 @@
+.size-of-home{
+    padding-top: 30px;
+    padding-bottom: 300px;
+    background-color: #ebebeb;
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon a {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon a {
+  font-size: 5rem;
+}
+
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
